@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script>
+        function hello() {
+          alert('Я ЖЕ ГОВОРИЛ НЕ НАЖИМАТЬ!');
+        }
+      </script>
+      <title>My web page!</title>
+      <style>
+        button {
+          background-color: darkcyan;
+          width: 200px;
+          height: 50px;
+          font-size: 25px;
+        }
+        button:hover {
+          background-color: darkgreen;
+        }
+      </style>
+    </head>
+    <body>
+        <h1>
+          <p style="color:purple;text-align: center;">Здарова!</p>
+
+        <p>An unordered list:</p>
+        <ul>
+          <li>pisos</li>
+          <li>pisos2</li>
+        </ul>
+                An ordered list:
+                <ol>
+                  <li>odin</li>
+                  <li>dva</li>
+                  <li>tri</li>
+                </ol>
+                </h1>
+                <script src="/script.js"></script>
+                <h2>Жители квартиры</h2>
+                <table>
+                  <style>
+                    table {
+                      border: 2px solid black;
+                    }
+                    th, td {
+                      border: 2px solid black;
+                      padding: 5px;
+                      text-align: center;
+                    }
+                    th {
+                      background: rgb(190, 189, 189);
+                    }
+                  </style>
+                  <tr>
+                    <th>Second name</th>
+                    <th>First name</th>
+                  </tr>
+                  <tr style="color:blue">
+                  <td>Suiarko</td>
+                  <td>Borys</td>
+                </tr>                
+                <tr style="color:red">
+                  <td>Shamanska</td>
+                  <td>Katherine</td>
+                </tr>
+                </table>
+                <button onclick="hello()">Не нажимать!</button>
+                <p><a href="{{ url_for('index') }}">Назад</a></p>
+                        </body>
+</html>
