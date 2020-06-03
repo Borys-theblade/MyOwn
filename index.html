@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+          document.querySelector('#new-task').onsubmit = () => {
+
+            const li = document.createElement('li');
+            li.innerHTML = document.querySelector('#task').value;
+
+            document.querySelector('#tasks').append(li);
+
+            document.querySelector('#task').value = '';
+            
+            return false;
+          };
+        });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+          document.querySelector('#color-change').onchange = function() {
+            document.querySelector('#hello').style.color = this.value;
+          };
+
+        });
+      </script>
+      <script src="index.js"></script>
+      <title>My web page!</title>
+      <style>
+        @keyframes grow {
+          from {
+            font-size: 20px;
+          }
+          to {
+            font-size: 100px;
+          }
+        }
+        h3 {
+          animation-name: grow;
+          animation-duration: 2s;
+          animation-fill-mode: forwards;
+        }
+        @keyframes move {
+          from {
+            left: 0%;
+          }
+          to {
+            left: 50%;
+          }
+        }
+        h4 {
+          position: relative;
+          animation-name: move;
+          animation-duration: 3s;
+          animation-fill-mode: forwards;
+        }
+      </style>
+    </head>
+    <body>
+      <h3 style="color:aquamarine; text-align: center;">Welcome!</h3>
+      <h4>to NOWHERE</h4>
+      <h1 id="hello">Hello!</h1>
+      <select id="color-change">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+      <h2 id="counter">0</h2>
+      <button>Жмакай!</button>
+      <h1>Tasks</h1>
+      <ul id="tasks">
+      </ul>
+      <form id="new-task">
+        <input id="task" autocomplete="off" autofocus placeholder="New Task" type="text">
+        <input type="submit">
+      </form>
+      <p><img src="img/pug.jpg" alt="kingdoms" width="300" height="250"></p>
+    </body>
+</html>
